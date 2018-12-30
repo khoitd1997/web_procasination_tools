@@ -9,8 +9,10 @@
 #include <sys/prctl.h>
 #include <sys/socket.h>
 
-#define PACKET_THRESHOLD 50
-#define FILTER_RULES "dst host www.crunchyroll.com"
+#define PACKET_THRESHOLD 200
+#define FILTER_RULES                                                           \
+  "dst host www.crunchyroll.com or dst host www.netflix.com or dst host "      \
+  "www.hulu.com"
 
 void packetCallback(unsigned char *useless, const struct pcap_pkthdr *pkthdr,
                     const unsigned char *packet) {
