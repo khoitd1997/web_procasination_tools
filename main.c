@@ -9,7 +9,7 @@
 #include <sys/prctl.h>
 #include <sys/socket.h>
 
-#define PACKET_THRESHOLD 200
+#define PACKET_THRESHOLD 150
 #define FILTER_RULES                                                           \
   "dst host www.crunchyroll.com or dst host www.netflix.com or dst host "      \
   "www.hulu.com"
